@@ -56,13 +56,10 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
     - assets/fonts/
     - assets/icons/
-
   fonts:
     - family: OpenSans
       fonts:
@@ -75,4 +72,16 @@ flutter:
         - asset: assets/fonts/OpenSans-Regular.ttf
           weight: 400  
         - asset: assets/fonts/OpenSans-Light.ttf
+          weight: 300
+    - family: SFPro
+      fonts:
+        - asset: assets/fonts/SF-Pro-Text-Bold.otf
+          weight: 700
+        - asset: assets/fonts/SF-Pro-Text-SemiBold.otf
+          weight: 600
+        - asset: assets/fonts/SF-Pro-Text-Medium.otf
+          weight: 500
+        - asset: assets/fonts/SF-Pro-Text-Regular.otf
+          weight: 400  
+        - asset: assets/fonts/SF-Pro-Text-Light.otf
           weight: 300

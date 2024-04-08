@@ -1,15 +1,15 @@
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:flutter/material.dart';
 
-enum FontFamilyType {
-  openSans;
-}
+enum FontFamilyType { openSans, sfPro }
 
 extension FontFamilyTypeExtension on FontFamilyType {
   String? name() {
     switch (this) {
       case FontFamilyType.openSans:
         return "OpenSans";
+      case FontFamilyType.sfPro:
+        return "SFPro";
     }
   }
 }
@@ -67,7 +67,7 @@ class AppText extends StatelessWidget {
       int? maxLines,
       double? fontSize = 15.0,
       TextOverflow? textOverflow,
-      FontFamilyType fontFamilyType = FontFamilyType.openSans,
+      FontFamilyType fontFamilyType = FontFamilyType.sfPro,
       TextDecoration decoration = TextDecoration.none}) {
     return AppText(
       text: text,
@@ -95,7 +95,7 @@ class AppText extends StatelessWidget {
       int? maxLines,
       double? fontSize = 14.0,
       TextOverflow? textOverflow,
-      FontFamilyType fontFamilyType = FontFamilyType.openSans,
+      FontFamilyType fontFamilyType = FontFamilyType.sfPro,
       TextDecoration decoration = TextDecoration.none}) {
     return AppText(
       text: text,

@@ -39,6 +39,8 @@ class AlbumPage extends GetView<AlbumController> {
             AppText.primary("UserId: ${albumDTO.userId}"),
             AppText.primary("Id: ${albumDTO.id}"),
             AppText.primaryButton("Title: ${albumDTO.title}"),
+            AppText.primaryButton("Title: ${albumDTO.title}",
+                fontFamilyType: FontFamilyType.openSans),
           ],
         ),
       ),

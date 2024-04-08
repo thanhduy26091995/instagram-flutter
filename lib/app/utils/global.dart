@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 ThemeData primaryTheme = ThemeData(
   primarySwatch: MaterialColor(0xffFFFFFF, color),
   useMaterial3: false,
-  fontFamily: FontFamilyType.openSans.name(),
+  fontFamily: FontFamilyType.sfPro.name(),
   textSelectionTheme:
       const TextSelectionThemeData(cursorColor: Color(0xff428BCA)),
 );
