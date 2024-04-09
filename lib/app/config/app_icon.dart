@@ -8,6 +8,9 @@ abstract class AppIcon {
 
   static AppIconBuilder get icArrowDown =>
       AppIconBuilder(assetPath: "$_assetPath/ic_arrow_down.svg");
+
+  static AppIconBuilder get icInstagram =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_instagram_logo.svg");
 }
 
 class AppIconBuilder {

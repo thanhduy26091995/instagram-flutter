@@ -9,6 +9,9 @@ ThemeData primaryTheme = ThemeData(
       const TextSelectionThemeData(cursorColor: Color(0xff428BCA)),
 );
 
+ThemeData darkTheme =
+    ThemeData(useMaterial3: false, fontFamily: FontFamilyType.sfPro.name());
+
 Map<int, Color> color = {
   50: const Color.fromRGBO(255, 255, 255, .1),
   100: const Color.fromRGBO(255, 255, 255, .2),

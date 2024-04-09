@@ -9,6 +9,9 @@ abstract class AppImage {
 
   static AppImageBuilder get imageCover =>
       AppImageBuilder(assetPath: "$assetPath/cover.png");
+
+  static AppImageBuilder get avatar1 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_avatar1.png");
 }
 
 class AppImageBuilder {
