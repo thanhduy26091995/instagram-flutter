@@ -1,14 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_page.dart';
 import 'package:instagram_flutter/app/config/app_route.dart';
 import 'package:instagram_flutter/app/utils/global.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 void main() {
-  // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-  //     statusBarColor: Colors.black, statusBarBrightness: Brightness.dark));
-
   runApp(const MainApp(
     route: AppRoute.welcome,
   ));
@@ -21,6 +19,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: AppColor.borderInputColor, // Desired status bar color
+    ));
+
     return GetMaterialApp(
       initialRoute: route,
       getPages: AppPage.pages,

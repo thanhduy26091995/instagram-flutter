@@ -14,6 +14,36 @@ abstract class AppIcon {
 
   static AppIconBuilder get icFacebook =>
       AppIconBuilder(assetPath: "$_assetPath/ic_facebook.svg");
+
+  static AppIconBuilder get icHome =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_home.svg");
+
+  static AppIconBuilder get icHomeSelected =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_home_selected.svg");
+
+  static AppIconBuilder get icSearch =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_search.svg");
+
+  static AppIconBuilder get icSearchSelected =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_search_selected.svg");
+
+  static AppIconBuilder get icAdd =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_add.svg");
+
+  static AppIconBuilder get icHeart =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_heart.svg");
+
+  static AppIconBuilder get icHeartSelected =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_heart_selected.svg");
+
+  static AppIconBuilder get icCamera =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_camera.svg");
+
+  static AppIconBuilder get icIGTV =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_igtv.svg");
+
+  static AppIconBuilder get icMessenger =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_messenger.svg");
 }
 
 class AppIconBuilder {

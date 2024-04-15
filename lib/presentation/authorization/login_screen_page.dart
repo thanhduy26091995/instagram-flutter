@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
 import 'package:instagram_flutter/app/config/app_text.dart';
+import 'package:instagram_flutter/presentation/home/main_screen_page.dart';
 
 import '../widgets/primary_button.dart';
 
@@ -26,7 +28,9 @@ class LoginScreenPage extends StatelessWidget {
             children: [
               Flexible(
                 flex: 9,
-                child: _mainContent(),
+                child: _mainContent(() {
+                  Get.offAll(const MainScreenPage());
+                }),
               ),
               Flexible(
                 flex: 1,
@@ -39,7 +43,7 @@ class LoginScreenPage extends StatelessWidget {
     );
   }
 
-  Widget _mainContent() {
+  Widget _mainContent(VoidCallback onLoginClick) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,7 +80,7 @@ class LoginScreenPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           child: PrimaryButton(
             title: "Log In",
-            onPressed: () => {},
+            onPressed: onLoginClick,
             padding: const EdgeInsets.symmetric(horizontal: 32),
           ),
         ),
