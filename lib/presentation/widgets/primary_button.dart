@@ -9,7 +9,7 @@ class PrimaryButton extends StatelessWidget {
       required this.onPressed,
       this.isEnable = true,
       this.backgroundColor = AppColor.primaryButtonBackground,
-      this.disableBackgroundColor = AppColor.black,
+      this.disableBackgroundColor = AppColor.primaryButtonBackground,
       this.height = 44,
       this.radius = 5,
       this.padding,
@@ -30,14 +30,14 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: backgroundColor,
+      color: _backgroundColor(),
       clipBehavior: Clip.hardEdge,
       borderRadius: BorderRadius.circular(radius),
       child: InkWell(
         onTap: onPressed,
         child: Container(
           padding: padding,
-          color: backgroundColor,
+          color: _backgroundColor(),
           height: height,
           width: double.infinity,
           alignment: Alignment.center,
@@ -48,5 +48,12 @@ class PrimaryButton extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color _backgroundColor() {
+    if (isEnable) {
+      return backgroundColor;
+    }
+    return disableBackgroundColor.withOpacity(0.3);
   }
 }

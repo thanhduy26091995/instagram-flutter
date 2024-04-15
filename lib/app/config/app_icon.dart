@@ -11,6 +11,9 @@ abstract class AppIcon {
 
   static AppIconBuilder get icInstagram =>
       AppIconBuilder(assetPath: "$_assetPath/ic_instagram_logo.svg");
+
+  static AppIconBuilder get icFacebook =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_facebook.svg");
 }
 
 class AppIconBuilder {
