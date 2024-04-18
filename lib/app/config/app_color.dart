@@ -9,6 +9,13 @@ class AppColor {
 
   //  Button background
   static const primaryButtonBackground = Color(0xFF3797ef);
+  static const gradientColor1 = Color(0xFFFBAA47);
+  static const gradientColor2 = Color(0xFFD91A46);
+  static const gradientColor3 = Color(0xFFA60F93);
+
+  static const gradientColor4 = Color(0xFFE20337);
+  static const gradientColor5 = Color(0xFFC60188);
+  static const gradientColor6 = Color(0xFF7700C3);
 
   // Text Color
   static const primaryTextColor = Color(0xFF262626);

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
 import 'package:instagram_flutter/app/config/app_image.dart';
-import 'package:instagram_flutter/presentation/home/home_screen_page.dart';
+
+import 'home/home_screen_page.dart';
 
 class MainScreenPage extends StatefulWidget {
   const MainScreenPage({super.key});

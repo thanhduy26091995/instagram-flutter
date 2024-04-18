@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
+import 'package:instagram_flutter/presentation/main/home/stories_page.dart';
 
 class HomeScreenPage extends StatelessWidget {
   const HomeScreenPage({super.key});
@@ -20,12 +21,13 @@ class HomeScreenPage extends StatelessWidget {
               backgroundColor: AppColor.borderInputColor,
               elevation: 0.5,
             ),
+            const SliverToBoxAdapter(
+              child: StoriesPage(),
+            ),
             SliverList(
-                delegate: SliverChildBuilderDelegate(
-                    (context, index) => ListTile(
-                          title: Text("${index}"),
-                        ),
-                    childCount: 1000))
+                delegate: SliverChildBuilderDelegate((context, index) {
+              return ListTile(title: Text("${index}"));
+            }, childCount: 1000))
           ],
         ),
       ),

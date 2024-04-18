@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
 import 'package:instagram_flutter/app/config/app_text.dart';
-import 'package:instagram_flutter/presentation/home/main_screen_page.dart';
 
+import '../main/main_screen_page.dart';
 import '../widgets/primary_button.dart';
 
 class LoginScreenPage extends StatelessWidget {

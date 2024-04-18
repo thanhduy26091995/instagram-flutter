@@ -4,7 +4,8 @@ import 'package:instagram_flutter/presentation/album/album_page.dart';
 import 'package:get/get.dart';
 import 'package:instagram_flutter/presentation/authorization/login_screen_page.dart';
 import 'package:instagram_flutter/presentation/authorization/welcome_screen_page.dart';
-import 'package:instagram_flutter/presentation/home/main_screen_page.dart';
+
+import '../../presentation/main/main_screen_page.dart';
 
 class AppPage {
   static final pages = [
