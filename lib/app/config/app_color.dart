@@ -6,6 +6,7 @@ class AppColor {
   static const backgroundDark = Color(0x00000000);
   static const borderInputColor = Color(0xFFFAFAFA);
   static const backgroundBottomBar = Color(0xFFF7F7F7);
+  static const backgroundMediaSize = Color(0xFF121212);
 
   //  Button background
   static const primaryButtonBackground = Color(0xFF3797ef);

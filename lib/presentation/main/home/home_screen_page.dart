@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
+import 'package:instagram_flutter/presentation/main/home/new_feed_item.dart';
 import 'package:instagram_flutter/presentation/main/home/stories_page.dart';
 
 class HomeScreenPage extends StatelessWidget {
@@ -26,7 +27,7 @@ class HomeScreenPage extends StatelessWidget {
             ),
             SliverList(
                 delegate: SliverChildBuilderDelegate((context, index) {
-              return ListTile(title: Text("${index}"));
+              return const NewFeedItem();
             }, childCount: 1000))
           ],
         ),

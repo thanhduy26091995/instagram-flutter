@@ -59,7 +59,7 @@ class AppText extends StatelessWidget {
       this.configKey});
 
   factory AppText.primary(String text,
-      {Color? color = AppColor.black333,
+      {Color? color = AppColor.primaryTextColor,
       FontWeightType? fontWeight = FontWeightType.regular,
       bool scalable = true,
       String? configKey,

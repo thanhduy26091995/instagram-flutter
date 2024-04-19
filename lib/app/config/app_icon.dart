@@ -44,6 +44,18 @@ abstract class AppIcon {
 
   static AppIconBuilder get icMessenger =>
       AppIconBuilder(assetPath: "$_assetPath/ic_messenger.svg");
+
+  static AppIconBuilder get icMore =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_more.svg");
+
+  static AppIconBuilder get icVerified =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_verified.svg");
+
+  static AppIconBuilder get icComment =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_comment.svg");
+
+  static AppIconBuilder get icBookmark =>
+      AppIconBuilder(assetPath: "$_assetPath/ic_bookmark.svg");
 }
 
 class AppIconBuilder {
