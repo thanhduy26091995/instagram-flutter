@@ -129,7 +129,8 @@ class NewFeedItem extends StatelessWidget {
 
   Widget _content() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Row(
           children: [
