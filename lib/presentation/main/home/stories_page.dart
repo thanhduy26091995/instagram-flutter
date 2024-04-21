@@ -21,7 +21,7 @@ class StoriesPage extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
-              return _storyItem(context, index % 2 == 0);
+              return _storyItem(context, index <= 1);
             },
             padding: const EdgeInsets.symmetric(horizontal: 10),
             itemCount: 20,

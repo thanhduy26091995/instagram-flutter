@@ -3,17 +3,31 @@ import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
 import 'package:instagram_flutter/app/config/app_image.dart';
 import 'package:instagram_flutter/app/config/app_text.dart';
+import 'package:instagram_flutter/presentation/main/home/dot_item.dart';
 
-class NewFeedItem extends StatelessWidget {
+class NewFeedItem extends StatefulWidget {
   const NewFeedItem({super.key});
+
+  @override
+  State<NewFeedItem> createState() => _NewFeedItemState();
+}
+
+class _NewFeedItemState extends State<NewFeedItem> {
+  int _currentPage = 0;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         _userInformation(),
-        const MainMediaView(),
-        _mainContent(),
+        MainMediaView(
+          onPageChanged: (currentPage) {
+            setState(() {
+              _currentPage = currentPage;
+            });
+          },
+        ),
+        _mainContent(_currentPage),
         const Divider(
           height: 0.5,
           color: AppColor.lineDivider,
@@ -81,13 +95,13 @@ class NewFeedItem extends StatelessWidget {
     );
   }
 
-  Widget _mainContent() {
+  Widget _mainContent(int currentPage) {
     return Padding(
       padding: const EdgeInsets.all(14.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          _buttonsContainer(),
+          _buttonsContainer(currentPage),
           const SizedBox(
             height: 12,
           ),
@@ -97,13 +111,13 @@ class NewFeedItem extends StatelessWidget {
     );
   }
 
-  Widget _buttonsContainer() {
+  Widget _buttonsContainer(int currentPage) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Flexible(
-          flex: 9,
+          flex: 5,
           child: Row(
             children: [
               AppIcon.icHeart.widget(width: 24, height: 24),
@@ -119,10 +133,30 @@ class NewFeedItem extends StatelessWidget {
           ),
         ),
         Flexible(
-          flex: 1,
+          flex: 5,
           fit: FlexFit.tight,
-          child: AppIcon.icBookmark.widget(width: 24, height: 24),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _dotItems(currentPage),
+                AppIcon.icBookmark.widget(width: 24, height: 24)
+              ]),
         )
+      ],
+    );
+  }
+
+  Widget _dotItems(int currentPage) {
+    return Row(
+      children: [
+        for (int i = 0; i < 3; i++) ...[
+          DotItem(
+            isSelected: currentPage == i,
+          ),
+          const SizedBox(
+            width: 5,
+          )
+        ]
       ],
     );
   }
@@ -190,7 +224,9 @@ class NewFeedItem extends StatelessWidget {
 }
 
 class MainMediaView extends StatefulWidget {
-  const MainMediaView({super.key});
+  final Function(int) onPageChanged;
+
+  const MainMediaView({super.key, required this.onPageChanged});
 
   @override
   State<MainMediaView> createState() => _MainMediaViewState();
@@ -207,6 +243,7 @@ class _MainMediaViewState extends State<MainMediaView> {
     _controller.addListener(() {
       setState(() {
         _currentPage = _controller.page!.round();
+        widget.onPageChanged(_currentPage);
       });
     });
   }
