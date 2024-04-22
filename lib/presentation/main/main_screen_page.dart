@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
 import 'package:instagram_flutter/app/config/app_image.dart';
+import 'package:instagram_flutter/presentation/main/search/search_screen_page.dart';
 
 import 'home/home_screen_page.dart';
 
@@ -15,12 +16,12 @@ class MainScreenPage extends StatefulWidget {
 class _MainScreenPageState extends State<MainScreenPage> {
   int _selectedIndex = 0;
 
-  static List<Widget> _widgetOptions = <Widget>[
-    HomeScreenPage(),
-    Text('Search Page'),
-    Text('Profile Page'),
-    Text('Home Page'),
-    Text('Search Page')
+  static final List<Widget> _widgetOptions = <Widget>[
+    const HomeScreenPage(),
+    const SearchScreenPage(),
+    const Text('Profile Page'),
+    const Text('Home Page'),
+    const Text('Search Page')
   ];
 
   void _onItemTapped(int index) {
