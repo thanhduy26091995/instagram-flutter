@@ -15,6 +15,27 @@ abstract class AppImage {
 
   static AppImageBuilder get imageMainMedia1 =>
       AppImageBuilder(assetPath: "$assetPath/iv_image1.png");
+
+  static AppImageBuilder get image2 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_image2.png");
+
+  static AppImageBuilder get image3 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_image3.png");
+
+  static AppImageBuilder get image4 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_image4.png");
+
+  static AppImageBuilder get image5 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_image5.png");
+
+  static AppImageBuilder get image6 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_image6.png");
+
+  static AppImageBuilder get image7 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_image7.png");
+
+  static AppImageBuilder get image8 =>
+      AppImageBuilder(assetPath: "$assetPath/iv_image8.png");
 }
 
 class AppImageBuilder {

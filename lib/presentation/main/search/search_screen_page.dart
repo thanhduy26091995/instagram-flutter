@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
 import 'package:instagram_flutter/app/config/app_image.dart';
 import 'package:instagram_flutter/presentation/main/search/genre_item.dart';
@@ -38,14 +39,27 @@ class SearchScreenPage extends StatelessWidget {
             ),
             const SliverPadding(padding: EdgeInsets.only(top: 10)),
             SliverGrid(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, // Number of columns in the grid
-                crossAxisSpacing: 1.0, // Horizontal space between cells
-                mainAxisSpacing: 1.0, // Vertical space between cells
-              ),
+              gridDelegate: SliverQuiltedGridDelegate(
+                  crossAxisCount: 3,
+                  // Number of columns in the grid
+                  crossAxisSpacing: 1.0,
+                  // Horizontal space between cells
+                  mainAxisSpacing: 1.0,
+                  // Vertical space between cells
+                  repeatPattern: QuiltedGridRepeatPattern.inverted,
+                  pattern: [
+                    const QuiltedGridTile(1, 1),
+                    const QuiltedGridTile(2, 2),
+                    // QuiltedGridTile(2, 2),
+                    const QuiltedGridTile(1, 1),
+                    const QuiltedGridTile(1, 1),
+                    const QuiltedGridTile(1, 1),
+                    const QuiltedGridTile(1, 1),
+                    // QuiltedGridTile(1, 1),
+                  ]),
               delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {
-                  return AppImage.imageCover.widget(fit: BoxFit.cover);
+                  return AppImage.image3.widget(fit: BoxFit.cover);
                 },
                 childCount: 100, // Number of items in the grid
               ),
