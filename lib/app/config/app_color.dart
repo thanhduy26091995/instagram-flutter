@@ -26,6 +26,8 @@ class AppColor {
   static const primaryTextColorWhite = Color(0xFFFFFFFF);
   static const lineDivider = Color(0x3C3C434A);
 
+  static const borderAvatarColor = Color(0xFFC7C7CC);
+
   // Black
   static const black = Color(0x00000000);
   static const black333 = Color(0xff333333);

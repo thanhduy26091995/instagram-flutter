@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_flutter/app/config/app_color.dart';
 import 'package:instagram_flutter/app/config/app_icon.dart';
 import 'package:instagram_flutter/app/config/app_image.dart';
+import 'package:instagram_flutter/presentation/main/profile/profile_screen_page.dart';
 import 'package:instagram_flutter/presentation/main/search/search_screen_page.dart';
 
 import 'home/home_screen_page.dart';
@@ -21,7 +22,7 @@ class _MainScreenPageState extends State<MainScreenPage> {
     const SearchScreenPage(),
     const Text('Profile Page'),
     const Text('Home Page'),
-    const Text('Search Page')
+    const ProfileScreenPage()
   ];
 
   void _onItemTapped(int index) {
